@@ -1,0 +1,62 @@
+{
+  "name": "Store",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "shipping_note": {
+      "type": "string"
+    },
+    "shipping_cost": {
+      "type": "number"
+    },
+    "free_shipping_from": {
+      "type": "number"
+    },
+    "returns_note": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number"
+    },
+    "feed_url": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "offers_count": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "slug"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

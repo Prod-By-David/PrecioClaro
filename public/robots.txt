@@ -1,0 +1,9 @@
+# PrecioClaro — robots.txt
+# Sustituye TU-DOMINIO por el dominio real cuando publiques la app.
+
+User-agent: *
+Allow: /
+Disallow: /cesta
+Disallow: /alertas
+
+# Sitemap: https://TU-DOMINIO/sitemap.xml

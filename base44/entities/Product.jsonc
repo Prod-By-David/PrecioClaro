@@ -1,0 +1,111 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "unit_size": {
+      "type": "number"
+    },
+    "unit_label": {
+      "type": "string"
+    },
+    "specs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "rating": {
+      "type": "number"
+    },
+    "reviews_count": {
+      "type": "number"
+    },
+    "best_price": {
+      "type": "number"
+    },
+    "previous_best_price": {
+      "type": "number"
+    },
+    "best_store": {
+      "type": "string"
+    },
+    "store_count": {
+      "type": "number"
+    },
+    "lowest_90d": {
+      "type": "number"
+    },
+    "highest_90d": {
+      "type": "number"
+    },
+    "last_sync": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "trend": {
+      "type": "string",
+      "enum": [
+        "bajando",
+        "estable",
+        "subiendo"
+      ],
+      "enumColors": [
+        "green",
+        "gray",
+        "red"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "slug",
+    "category"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
